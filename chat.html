@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 对话 · 徐志成</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-page">
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">🌟 徐志成</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="chat.html" class="nav-chat-link">对话</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="chat-layout">
+    <aside class="chat-sidebar" id="chatSidebar">
+      <div class="chat-sidebar-header">
+        <button type="button" class="btn-new-chat" id="btnNewChat">+ 新对话</button>
+      </div>
+      <ul class="chat-session-list" id="sessionList"></ul>
+      <div class="chat-sidebar-footer">
+        <a href="index.html">← 返回徐志成的个人主页</a>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <div class="chat-topbar">
+        <button type="button" class="btn-sidebar-toggle" id="btnSidebarToggle" aria-label="打开会话列表">☰</button>
+        <span class="chat-topbar-title" id="chatTitle">新对话</span>
+        <span class="chat-topbar-hint">刷新页面后记录将清空</span>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-messages-inner" id="messagesInner"></div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="chat-input-wrap">
+          <textarea
+            class="chat-input"
+            id="chatInput"
+            rows="1"
+            placeholder="输入消息，向 AI 提问…"
+            aria-label="消息输入"
+          ></textarea>
+          <button type="button" class="btn-send" id="btnSend" disabled>发送</button>
+        </div>
+        <p class="chat-input-hint">Enter 发送 · Shift+Enter 换行</p>
+        <p class="chat-disclaimer">AI 可能会犯错，重要信息请自行核实。本页对话不会保存到服务器。</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
